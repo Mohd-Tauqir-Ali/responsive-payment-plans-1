@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Plans</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style type="text/css">
+        @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+        .mp-pricing{
+            background-color: #F8F9F9;
+            padding:50px 0;
+        }
+
+        .mp-pricing .pricing-title{
+            text-align: center;
+        }
+
+        .mp-pricing h1{
+            font-weight: 900;
+            font-size: 1.5rem;
+            color: #CC313B;
+        }
+
+        .mp-pricing p{
+            font-size: 0.9rem;
+        }
+
+
+        .mp-pricing .mp-pricing-OuterBox{
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .mp-pricing .mp-pricing-OuterBox .mp-pricing-box{
+            flex: 0 0 calc(31% - 10px);
+            margin:10px 15px;
+            padding:15px 20px;
+            border-radius:3px;
+            box-shadow:0 4px 6px -1px rgba(0,0,0,.1),0 2px 4px -2px rgba(0,0,0,.1);
+            background-color: #CC313B;
+            color: #FFFFFF;
+        }
+        .mp-pricing-box.bg-white{
+            background-color: #FFFFFF;
+        }
+        .mp-pricing-box.bg-white.text-dark{
+            color: #251839!important;
+        }
+        .mp-pricing-box .price-title, .mp-pricing-box .price-title small{
+            font-size: 1.3rem;
+            font-weight: 500!important;
+        }
+
+
+        .mp-pricing-box.bg-white .divider{
+            width: 2.3rem;
+            height: 0.12rem;
+            display: inline-block;
+            background-color:#CC313B;
+        }
+
+        .mp-pricing-box .divider{
+            width: 2.3rem;
+            height: 0.12rem;
+            display: inline-block;
+            background-color:#FFFFFF;
+        }
+
+        .mp-pricing-box .price-amount{
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin:15px 0 0 0;
+        }
+        .mp-pricing-box .price-discount{
+            font-size: 0.8rem;
+            width: 100%;
+            display: block;
+            text-decoration: line-through;
+            font-weight: 600;
+        }
+        .mp-pricing-box .price-date{
+            font-size: 0.8rem;
+            width: 100%;
+            display: block;
+            
+        }
+        .mp-pricing-box .price-amount .price-validity{
+            font-size: 0.9rem;
+            text-wrap: nowrap;
+        }
+
+        .mp-pricing-box .planPoint{
+            margin-top: 5px;
+            margin-bottom: 15px;
+            letter-spacing: 0.6px;
+            display: flex;
+            font-size: 1.1rem;;
+        }
+        .mp-pricing-box .planPoint.disabled{
+            color:#8A9DB0;
+        }
+        .mp-pricing-box.bg-white .planPoints .planPoint .fa-check-circle-o{
+            color:#CC313B!important;
+            display: inline-block;
+            margin-right: 5px;
+            margin-top: 6px;
+        }
+        .mp-pricing-box .planPoints .planPoint .fa-check-circle-o{
+            color:#FFFFFF;
+            display: inline-block;
+            margin-right: 5px;
+            margin-top: 6px;
+        }
+
+        .mp-pricing-box .planPoints .planPoint .fa-times-circle-o{
+            color: #8A9DB0;
+            display: inline-block;
+            margin-right: 5px;
+            margin-top: 5px;
+        }
+
+        .mp-footer{
+            margin-top: 20px;
+            text-align: center;
+        }
+        .mp-footer p a{
+            color: #CC313B!important;
+            font-weight: bold;
+            text-decoration: underline;
+        }
+
+
+        /*responsive*/
+        @media (max-width: 767px) {
+            .mp-pricing .mp-pricing-OuterBox{
+                display: flex;
+                overflow-y: hidden;
+                overflow-x: scroll;
+                scrollbar-width: 1px;
+                scrollbar-color:#cc313b transparent;
+                flex-wrap:nowrap;
+            }
+            .mp-pricing .mp-pricing-OuterBox .mp-pricing-box{
+                flex-shrink: 0;
+                width: fit-content;
+                flex: 0 0 calc(75% - 10px);
+            }
+            .mp-pricing-box .planPoint{
+                font-size: 1rem;
+            }
+            .mp-pricing-box .price-amount{
+                line-height: 25px;
+            }
+            .mp-pricing .pricing-title{
+                text-align: left;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<section class="mp-pricing">
+    <div class="container">
+        <div class="pricing-title text-center">
+            <h1>Mobile Responsive Pricing Plans Section</h1>
+            <p><b>Test in mobile</b>. Line 2 text goes here...</p>
+        </div>
+        
+        <div class="mp-pricing-OuterBox">
+            <div class="mp-pricing-box bg-white text-dark">
+                <div class="price-title">Free</div>
+                <div class="divider"></div>
+                <div class="planPoints w-100">
+                    <div class="planPoint">
+                        <i class="fa fa-check-circle-o"></i>
+                        Limited This
+                    </div>
+                    <div class="planPoint">
+                        <i class="fa fa-check-circle-o"></i>
+                        Limited That
+                    </div>
+                    <div class="planPoint disabled">
+                        <i class="fa fa-times-circle-o" ></i>
+                        Photos
+                    </div>
+                    <div class="planPoint disabled">
+                        <i class="fa fa-times-circle-o" ></i>
+                        Shorlist & Save
+                    </div>
+                    <div class="planPoint disabled">
+                        <i class="fa fa-times-circle-o" ></i>
+                        Featured Listing
+                    </div>
+                </div>
+            </div>
+            <!-- pink -->
+            <div class="mp-pricing-box ">
+                <div class="price-title"><small>Basic</small> </div> 
+                <div class="price-amount">
+                    <small class='price-discount'>Rs. 999/- </small> 
+                    <span class="d-block w-100">Rs. 9999/- <small class="price-validity">5 months</small> </span>
+                        <small class='price-date'>Last Date: 15-11-2024 </small>
+                </div>
+                <div class="divider"></div>
+                <div class="planPoints w-100">
+                    
+                    <div class="planPoint">
+                        <i class="fa fa-check-circle-o"></i>
+                        Detail Point 1
+                    </div>
+                    <div class="planPoint">
+                        <i class="fa fa-check-circle-o"></i>
+                        Detail Point 2
+                    </div>
+                    <div class="planPoint">
+                        <i class="fa fa-check-circle-o"></i>
+                        Detail Point 3
+                    </div>
+                    <div class="planPoint">
+                        <i class="fa fa-check-circle-o"></i>
+                        Detail Point 4
+                    </div>
+                    <div class="planPoint">
+                        <i class="fa fa-check-circle-o"></i>
+                        Detail Point 5
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="mp-pricing-box ">
+                <div class="price-title"><small>Popular</small> </div> 
+                <div class="price-amount">
+                    <span class="d-block w-100">Rs. 999/- <small class="price-validity">5 months</small> </span>
+                </div>
+                <div class="divider"></div>
+                <div class="planPoints w-100">
+                    
+                    <div class="planPoint">
+                        <i class="fa fa-check-circle-o"></i>
+                        Detail Point 1
+                    </div>
+                    <div class="planPoint">
+                        <i class="fa fa-check-circle-o"></i>
+                        Detail Point 2
+                    </div>
+                    <div class="planPoint">
+                        <i class="fa fa-check-circle-o"></i>
+                        Detail Point 3
+                    </div>
+                    <div class="planPoint">
+                        <i class="fa fa-check-circle-o"></i>
+                        Detail Point 4
+                    </div>
+                    <div class="planPoint">
+                        <i class="fa fa-check-circle-o"></i>
+                        Detail Point 5
+                    </div>
+                </div>
+            </div>
+
+            <div class="mp-pricing-box ">
+                <div class="price-title"><small>Ultimate</small> </div> 
+                <div class="price-amount">
+                    <span class="d-block w-100">Rs. 999/- <small class="price-validity">5 months</small> </span>
+                </div>
+                <div class="divider"></div>
+                <div class="planPoints w-100">
+                    
+                    <div class="planPoint">
+                        <i class="fa fa-check-circle-o"></i>
+                        Detail Point 1
+                    </div>
+                    <div class="planPoint">
+                        <i class="fa fa-check-circle-o"></i>
+                        Detail Point 2
+                    </div>
+                    <div class="planPoint">
+                        <i class="fa fa-check-circle-o"></i>
+                        Detail Point 3
+                    </div>
+                    <div class="planPoint">
+                        <i class="fa fa-check-circle-o"></i>
+                        Detail Point 4
+                    </div>
+                    <div class="planPoint">
+                        <i class="fa fa-check-circle-o"></i>
+                        Detail Point 5
+                    </div>
+                </div>
+            </div>
+
+            <div class="mp-pricing-box ">
+                <div class="price-title"><small>Advanced</small> </div> 
+                <div class="price-amount">
+                    <span class="d-block w-100">Rs. 999/- <small class="price-validity">5 months</small> </span>
+                </div>
+                <div class="divider"></div>
+                <div class="planPoints w-100">
+                    
+                    <div class="planPoint">
+                        <i class="fa fa-check-circle-o"></i>
+                        Detail Point 1
+                    </div>
+                    <div class="planPoint">
+                        <i class="fa fa-check-circle-o"></i>
+                        Detail Point 2
+                    </div>
+                    <div class="planPoint">
+                        <i class="fa fa-check-circle-o"></i>
+                        Detail Point 3
+                    </div>
+                    <div class="planPoint">
+                        <i class="fa fa-check-circle-o"></i>
+                        Detail Point 4
+                    </div>
+                    <div class="planPoint">
+                        <i class="fa fa-check-circle-o"></i>
+                        Detail Point 5
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+         
+        
+        <div class="mp-footer">
+            <p>
+                If you have any queries about our pricing or payment methods, don't hesitate to reach out! You can easily contact us via call or WhatsApp at <b>+XX XXX XXX XXXX</b> for assistance.
+            </p>
+        </div>
+    </div>
+</section>
+    
+</body>
+</html>
